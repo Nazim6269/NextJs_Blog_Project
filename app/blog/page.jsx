@@ -1,18 +1,17 @@
 import CardList from "@/Components/CardList/CardList";
-import CategoryList from "@/Components/CategoryList/CategoryList";
-import Featured from "@/Components/Featured/Featured";
 import Menu from "@/Components/Menu/Menu";
-import styles from "./homePage.module.css";
+import styles from "./blogPage.module.css";
 
-export default function Home() {
+const Blog = () => {
   return (
     <div className={styles.container}>
-      <Featured />
-      <CategoryList />
+      <h1 className={styles.title}>style blog</h1>
       <div className={styles.content}>
         <CardList />
         <Menu />
       </div>
     </div>
   );
-}
+};
+
+export default Blog;
