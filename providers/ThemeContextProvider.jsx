@@ -1,8 +1,8 @@
 "use client";
 
 import { getFromLocalStorage } from "@/utils/getLocalStorage";
-import { useContext, useEffect, useState } from "react";
-import { ThemeContext } from "../context/index";
+import { useEffect, useState } from "react";
+import { ThemeContext } from "../context/ThemeContext";
 
 //providing context
 export const ThemeContextProvider = ({ children }) => {
@@ -23,8 +23,4 @@ export const ThemeContextProvider = ({ children }) => {
       {children}
     </ThemeContext.Provider>
   );
-};
-
-export const useThemeContext = () => {
-  return useContext(ThemeContext);
 };

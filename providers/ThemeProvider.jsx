@@ -1,10 +1,10 @@
 "use client";
 
-import { ThemeContext } from "@/context";
-import { useContext, useEffect, useState } from "react";
+import { useThemeContext } from "@/hooks/useThemeContext";
+import { useEffect, useState } from "react";
 
 const ThemeProvider = ({ children }) => {
-  const { theme } = useContext(ThemeContext);
+  const { theme } = useThemeContext();
   const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
