@@ -7,6 +7,7 @@ import styles from "./login.module.css";
 const Login = () => {
   const { data, status } = useSession();
   const router = useRouter();
+  console.log(data, " ", status);
 
   if (status === "loading") {
     return <div className={styles.loading}>Loading...</div>;
